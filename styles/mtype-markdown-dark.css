@@ -41,10 +41,14 @@ body[class*="dark-ui"] .mde-preview table th {
 }
 body[class*="dark-ui"] .mde-preview table th,
 body[class*="dark-ui"] .mde-preview table td {
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  border-left: 0;
 }
 body[class*="dark-ui"] .mde-preview table tr {
   background-color: transparent;
+  border: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 body[class*="dark-ui"] .mde-preview table tr:nth-child(2n) {

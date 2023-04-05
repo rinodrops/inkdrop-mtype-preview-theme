@@ -46,7 +46,7 @@
 .mde-preview code,
 .mde-preview kbd,
 .mde-preview pre {
-  font-family: "Source Han Code JP", monospace;
+  font-family: "UDev Gothic 35LG", monospace;
   font-weight: 500;
   font-size: 1em;
 }
@@ -213,11 +213,6 @@
   font-size: 1.54em;
   line-height: 2.5em;
 }
-.mde-preview > div:first-child > h1:first-child {
-  text-align: center;
-  padding-top: 4em;
-  padding-bottom: 5em;
-}
 .mde-preview h1 .anchor {
   line-height: 1;
 }
@@ -317,6 +312,7 @@
   width: 100%;
   overflow: auto;
   word-break: keep-all;
+  border: 0;
 }
 .mde-preview table th {
   font-weight: bold;
@@ -324,10 +320,14 @@
 .mde-preview table th,
 .mde-preview table td {
   padding: 6px 13px;
-  border: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  border-right: 0;
+  border-bottom: 1px solid #ddd;
+  border-left: 0;
 }
 .mde-preview table tr {
   background-color: #fff;
+  border: 0;
   border-top: 1px solid #ccc;
 }
 .mde-preview table tr:nth-child(2n) {
@@ -490,7 +490,7 @@
 .mde-preview kbd {
   display: inline-block;
   padding: 3px 5px;
-  font: 11px "Source Han Code JP", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font: 11px "UDev Gothic 35LG", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   line-height: 10px;
   color: #555;
   vertical-align: middle;
@@ -535,6 +535,11 @@
   .mde-preview pre > code {
     word-wrap: break-word;
     white-space: pre-wrap;
+  }
+  .mde-preview > div:first-child > h1:first-child {
+    text-align: center;
+    padding-top: 4em;
+    padding-bottom: 5em;
   }
 }
 .editor .mde-cm-wrapper .CodeMirror .CodeMirror-linewidget img[alt$='#size75'],

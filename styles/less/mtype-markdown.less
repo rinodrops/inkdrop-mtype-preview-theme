@@ -21,6 +21,8 @@
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   color: #000;
+  //font-family: "-apple-system", "BlinkMacSystemFont", "Minion Pro", "A-OTF Ryumin Pr6N", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  //font-family: "-apple-system", "BlinkMacSystemFont", "Apple Color Emoji", sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
   font-family: "Minion Pro", "A-OTF Ryumin Pr6N", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 500;
   font-size: 12.2px;
@@ -71,7 +73,7 @@
   code,
   kbd,
   pre {
-    font-family: "Source Han Code JP", monospace;
+    font-family: "UDev Gothic 35LG", monospace;
     font-weight: 500;
     font-size: 1em;
   }
@@ -110,6 +112,7 @@
   }
 
   input {
+    //font: 13px / 1.4 "-apple-system", "BlinkMacSystemFont", "Apple Color Emoji", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font: 13px / 1.4 "Myriad Pro", "A-OTF Gothic MB101 Pr6N", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
 
@@ -260,6 +263,7 @@
   h4,
   h5,
   h6 {
+    //font-family: "-apple-system", "BlinkMacSystemFont", "Apple Color Emoji";
     font-family: "Myriad Pro", "A-OTF Gothic MB101 Pr6N";
     font-weight: 700;
     margin-top: 0;
@@ -270,12 +274,6 @@
   h1 {
     font-size: 1.54em;
     line-height: 2.5em;
-  }
-
-  & > div:first-child > h1:first-child {
-    text-align: center;
-    padding-top: 4em;
-    padding-bottom: 5em;
   }
 
   h1 .anchor {
@@ -399,6 +397,7 @@
     width: 100%;
     overflow: auto;
     word-break: keep-all;
+    border: 0;
   }
 
   table th {
@@ -408,11 +407,15 @@
   table th,
   table td {
     padding: 6px 13px;
-    border: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-right: 0;
+    border-bottom: 1px solid #ddd;
+    border-left: 0;
   }
 
   table tr {
     background-color: #fff;
+    border: 0;
     border-top: 1px solid #ccc;
   }
 
@@ -529,7 +532,7 @@
   kbd {
     display: inline-block;
     padding: 3px 5px;
-    font: 11px "Source Han Code JP", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font: 11px "UDev Gothic 35LG", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     line-height: 10px;
     color: #555;
     vertical-align: middle;
@@ -585,6 +588,11 @@
       word-wrap: break-word;
       white-space: pre-wrap;
     }
+    & > div:first-child > h1:first-child {
+      text-align: center;
+      padding-top: 4em;
+      padding-bottom: 5em;
+    }  
   }
 }
 
