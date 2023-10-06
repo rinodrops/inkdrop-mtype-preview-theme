@@ -5,14 +5,16 @@
 .mde-preview {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  background-color: #ffffff;
   color: #000;
-  font-family: "Minion Pro", "A-OTF Ryumin Pr6N", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: 500;
-  font-size: 12.2px;
+  font-family: "Sabon LT Std", "A-OTF Ryumin Pr6N", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
   line-height: 1.5;
   word-wrap: break-word;
   font-feature-settings: "palt" on;
   letter-spacing: 0.01em;
+  border-radius: 0 9px 9px 0;
+  padding: 4px 16px;
 }
 .mde-preview:before {
   display: table;
@@ -31,7 +33,8 @@
   outline: 0;
 }
 .mde-preview strong {
-  font-weight: bold;
+  font-family: "Myriad Pro", "A-OTF Gothic MB101 Pr6N", "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 500;
 }
 .mde-preview img {
   border: 0;
@@ -46,7 +49,7 @@
 .mde-preview code,
 .mde-preview kbd,
 .mde-preview pre {
-  font-family: "UDev Gothic 35LG", monospace;
+  font-family: "UDev Gothic SP 35LG", monospace;
   font-weight: 500;
   font-size: 1em;
 }
@@ -66,22 +69,50 @@
   padding: 0;
 }
 .mde-preview table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: keep-all;
+  border: 0;
   border-collapse: collapse;
   border-spacing: 0;
 }
-.mde-preview td,
-.mde-preview th {
-  padding: 0;
+.mde-preview table th {
+  font-weight: 500;
+  color: #aaa;
+  text-transform: uppercase;
+  padding: 4px 13px 2px 13px;
+}
+.mde-preview table td {
+  font-weight: 400;
+  padding: 6px 13px 4px 13px;
+}
+.mde-preview table th,
+.mde-preview table td {
+  font-family: "Myriad Pro", "A-OTF Gothic MB101 Pr6N", "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1;
+  text-align: left;
+  border-top: 1px solid #ddd;
+  border-right: 0;
+  border-bottom: 1px solid #ddd;
+  border-left: 0;
+}
+.mde-preview table tr {
+  background-color: #fff;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+.mde-preview table tr:nth-child(2n) {
+  background-color: #f8f8f8;
 }
 .mde-preview * {
   box-sizing: border-box;
 }
 .mde-preview input {
-  font: 13px / 1.4 "Myriad Pro", "A-OTF Gothic MB101 Pr6N", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font: 13px / 1.4 "Myriad Pro", "A-OTF Gothic MB101 Pr6N", "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 .mde-preview a {
   color: #000;
-  text-decoration: underline dotted;
 }
 .mde-preview a:hover,
 .mde-preview a:active {
@@ -203,15 +234,15 @@
 .mde-preview h4,
 .mde-preview h5,
 .mde-preview h6 {
-  font-family: "Myriad Pro", "A-OTF Gothic MB101 Pr6N";
-  font-weight: 700;
-  margin-top: 0;
+  font-family: "Myriad Pro", "A-OTF Gothic MB101 Pr6N", "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 600;
   margin-bottom: 0;
   line-height: 1;
 }
 .mde-preview h1 {
   font-size: 1.54em;
   line-height: 2.5em;
+  margin-top: 3em;
 }
 .mde-preview h1 .anchor {
   line-height: 1;
@@ -219,20 +250,23 @@
 .mde-preview h2 {
   font-size: 1.38em;
   line-height: 2.5em;
+  margin-top: 3em;
 }
 .mde-preview h2 .anchor {
   line-height: 1;
 }
 .mde-preview h3 {
-  font-size: 1.15em;
+  font-size: 1.23em;
   line-height: 2.5em;
+  margin-top: 2em;
 }
 .mde-preview h3 .anchor {
   line-height: 1.2;
 }
 .mde-preview h4 {
-  font-size: 1em;
+  font-size: 1.08em;
   line-height: 2.5em;
+  margin-top: 2em;
 }
 .mde-preview h4 .anchor {
   line-height: 1.2;
@@ -240,6 +274,7 @@
 .mde-preview h5 {
   font-size: 1em;
   line-height: 2.5em;
+  margin-top: 2em;
 }
 .mde-preview h5 .anchor {
   line-height: 1.1;
@@ -247,9 +282,57 @@
 .mde-preview h6 {
   font-size: 1em;
   line-height: 2.5em;
+  margin-top: 2em;
 }
 .mde-preview h6 .anchor {
   line-height: 1.1;
+}
+.mde-preview h1 + h1,
+.mde-preview h2 + h1,
+.mde-preview h3 + h1,
+.mde-preview h4 + h1,
+.mde-preview h5 + h1,
+.mde-preview h6 + h1,
+.mde-preview h1 + h2,
+.mde-preview h2 + h2,
+.mde-preview h3 + h2,
+.mde-preview h4 + h2,
+.mde-preview h5 + h2,
+.mde-preview h6 + h2,
+.mde-preview h1 + h3,
+.mde-preview h2 + h3,
+.mde-preview h3 + h3,
+.mde-preview h4 + h3,
+.mde-preview h5 + h3,
+.mde-preview h6 + h3,
+.mde-preview h1 + h4,
+.mde-preview h2 + h4,
+.mde-preview h3 + h4,
+.mde-preview h4 + h4,
+.mde-preview h5 + h4,
+.mde-preview h6 + h4,
+.mde-preview h1 + h5,
+.mde-preview h2 + h5,
+.mde-preview h3 + h5,
+.mde-preview h4 + h5,
+.mde-preview h5 + h5,
+.mde-preview h6 + h5,
+.mde-preview h1 + h6,
+.mde-preview h2 + h6,
+.mde-preview h3 + h6,
+.mde-preview h4 + h6,
+.mde-preview h5 + h6,
+.mde-preview h6 + h6 {
+  margin-top: 0;
+}
+.mde-preview > div:first-child > h1:first-child,
+.mde-preview > div:first-child > h2:first-child,
+.mde-preview > div:first-child > h3:first-child,
+.mde-preview > div:first-child > h4:first-child,
+.mde-preview > div:first-child > h5:first-child,
+.mde-preview > div:first-child > h6:first-child {
+  padding: 0;
+  margin: 0;
 }
 .mde-preview p,
 .mde-preview blockquote,
@@ -262,7 +345,7 @@
   margin-bottom: 16px;
 }
 .mde-preview hr {
-  height: 4px;
+  height: 3px;
   padding: 0;
   margin: 16px 0;
   background-color: #e7e7e7;
@@ -290,7 +373,8 @@
   margin-top: 16px;
   font-size: 1em;
   font-style: italic;
-  font-weight: bold;
+  font-weight: 500;
+  font-family: "Myriad Pro", "A-OTF Gothic MB101 Pr6N", "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 .mde-preview dl dd {
   padding: 0 16px;
@@ -307,32 +391,6 @@
 .mde-preview blockquote > :last-child {
   margin-bottom: 0;
 }
-.mde-preview table {
-  display: block;
-  width: 100%;
-  overflow: auto;
-  word-break: keep-all;
-  border: 0;
-}
-.mde-preview table th {
-  font-weight: bold;
-}
-.mde-preview table th,
-.mde-preview table td {
-  padding: 6px 13px;
-  border-top: 1px solid #ddd;
-  border-right: 0;
-  border-bottom: 1px solid #ddd;
-  border-left: 0;
-}
-.mde-preview table tr {
-  background-color: #fff;
-  border: 0;
-  border-top: 1px solid #ccc;
-}
-.mde-preview table tr:nth-child(2n) {
-  background-color: #f8f8f8;
-}
 .mde-preview img {
   max-width: 100%;
   box-sizing: content-box;
@@ -344,7 +402,8 @@
   padding-bottom: 0.2em;
   margin: 0;
   font-size: 85%;
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: #eaeaea;
+  border: 1px solid #cbcbcb;
   border-radius: 3px;
 }
 .mde-preview code:before,
@@ -359,7 +418,7 @@
   word-break: normal;
   white-space: pre;
   background: transparent;
-  border: 0;
+  border: 1px solid #cbcbcb;
 }
 .mde-preview pre {
   padding: 16px;
@@ -367,7 +426,7 @@
   word-wrap: normal;
   font-size: 85%;
   line-height: 1.45;
-  background-color: #f7f7f7;
+  background-color: #eaeaea;
   border-radius: 3px;
 }
 .mde-preview pre code {
@@ -385,18 +444,10 @@
 .mde-preview pre code:after {
   content: normal;
 }
-.mde-preview kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font-size: 11px;
-  line-height: 10px;
-  color: #555;
-  vertical-align: middle;
-  background-color: #fcfcfc;
-  border: solid 1px #ccc;
-  border-bottom-color: #bbb;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #bbb;
+.mde-preview pre:has(.katex) {
+  background-color: #ffffff;
+  padding: 0;
+  margin: 0 0 1.45em 0;
 }
 .mde-preview .cm-header {
   color: blue;
@@ -490,12 +541,12 @@
 .mde-preview kbd {
   display: inline-block;
   padding: 3px 5px;
-  font: 11px "UDev Gothic 35LG", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  line-height: 10px;
+  font: 11px "UDEV Gothic SP 35LG", monospace;
+  line-height: 11px;
   color: #555;
   vertical-align: middle;
-  background-color: #fcfcfc;
-  border: solid 1px #ccc;
+  background-color: #eaeaea;
+  border: solid 1px #cbcbcb;
   border-bottom-color: #bbb;
   border-radius: 3px;
   box-shadow: inset 0 -1px 0 #bbb;
@@ -528,6 +579,9 @@
   min-width: 50pt !important;
 }
 @media print {
+  .mde-preview {
+    font-size: 12.2px;
+  }
   .mde-preview table {
     overflow: hidden;
     word-break: break-word;
@@ -540,6 +594,10 @@
     text-align: center;
     padding-top: 4em;
     padding-bottom: 5em;
+  }
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 }
 .editor .mde-cm-wrapper .CodeMirror .CodeMirror-linewidget img[alt$='#size75'],

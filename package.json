@@ -1,16 +1,17 @@
 {
   "name": "mtype-preview",
-  "description": "Modern Type preview theme for Inkdrop Markdown Editor",
+  "description": "Modern Type Preview Theme for Inkdrop",
   "version": "1.1.0",
   "theme": "preview",
   "scripts": {
     "build": "lessc styles/less/mtype-markdown.less styles/mtype-markdown.css && lessc styles/less/mtype-markdown-dark.less styles/mtype-markdown-dark.css"
   },
   "repository": "https://github.com/rinodrops/inkdrop-mtype-preview-theme",
+  "author": "Rino <rino@emotiongraphics.jp>",
   "license": "MIT",
   "styleSheets": [
     "mtype-markdown.css",
-    "mtype-markdown-dark.css"
+	"mtype-markdown-dark.css"
   ],
   "engines": {
     "inkdrop": "^5.x"
