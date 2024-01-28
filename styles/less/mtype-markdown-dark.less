@@ -1,121 +1,187 @@
+// ============================================================================
+// Mtype-preview Dark Theme for Inkdrop
+// ============================================================================
+
+// ----------------------------------------------------------------------------
+@import "./colors.less";
+@import "./fonts.less";
+// ----------------------------------------------------------------------------
 body[class*="dark-ui"] {
   .mde-preview {
-    background-color: #ffffff;
+    background-color: transparent;
+    color: @white;
   }
-
-  /*
+  // ----------------------------------------------------------------------------
   .mde-preview {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 14px;
-  }
+    // --------------------------------------------------------------------------
+    // Basic
+    // --------------------------------------------------------------------------
+    h1 .octicon-link,
+    h2 .octicon-link,
+    h3 .octicon-link,
+    h4 .octicon-link,
+    h5 .octicon-link,
+    h6 .octicon-link {
+      color: @white;
+    }
+  
+    hr {
+      border-bottom-color: @gray-10;
+    }
+    
+    
+    // --------------------------------------------------------------------------
+    // Formatting
+    // --------------------------------------------------------------------------
+    blockquote {
+      background-color: @gray-alpha-lighter;
+      border-left-color: @gray-alpha-lighter;
+      color: @gray-10;
+    }
+    // --------------------------------------------------------------------------
+    code,
+    kbd,
+    pre {
+      background-color: @gray-alpha-lighter;
+      color: @white;
+    }
 
-  .mde-preview {
-    a {
+    // Inline-code
+    p code,
+    ul code,
+    ol code,
+    table code {
+      background: @gray-alpha-lighter;
+      border-color: @gray-alpha-lighter;
+      color: @red-14;
+    }
+
+    // math
+    pre:has(.katex) {
       background-color: transparent;
     }
+    
+    kbd {
+      background: @gray-alpha-lighter;
+      border-color: @gray-alpha-lighter;
+      color: @gray-08;
+    }
+    
+    pre code {
+      background-color: transparent !important;
+    }
+    // --------------------------------------------------------------------------
 
+
+    // --------------------------------------------------------------------------
+    // Images
+    // --------------------------------------------------------------------------
+    
     img {
-      border: 0;
+      background-color: @black;
     }
-
-    input {
-      color: inherit;
-    }
-
+    // --------------------------------------------------------------------------
+    
+    
+    // --------------------------------------------------------------------------
+    // Links
+    // --------------------------------------------------------------------------
     a {
-      color: #6987AF;
+      color: @azure-12;
+      border-bottom-color: @azure-10;
     }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: rgba(255, 255, 255, 0.875);
+    
+    a:active,
+    a:hover {
+      color: @azure-12;
+      border-bottom-color: @azure-10;
     }
-
-    h6 {
-      color: rgba(255, 255, 255, 0.625);
-    }
-
-    h1,
-    h2 {
-      border-bottom-color: rgba(255, 255, 255, 0.4);
-    }
-
-    hr {
-      background-color: rgba(255, 255, 255, 0.3);
-    }
-
-    blockquote {
-      color: rgba(255, 255, 255, 0.4);
-      border-left: 4px solid rgba(255, 255, 255, 0.3);
-    }
-
+    // --------------------------------------------------------------------------
+    
+    
+    // --------------------------------------------------------------------------
+    // Tables
+    // --------------------------------------------------------------------------
     table th {
-      background-color: rgba(255, 255, 255, 0.1);
+      color: @gray-08;
     }
-
+    
     table th,
     table td {
-      border-top: 1px solid rgba(255, 255, 255, 0.25);
-      border-right: 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-      border-left: 0;
+      border-top-color: @gray-04;
+      border-bottom-color: @gray-04;
     }
-
+    
     table tr {
       background-color: transparent;
-      border: 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.25);
+      border-top-color: @gray-08;
     }
-
+    
     table tr:nth-child(2n) {
-      background-color: rgba(255, 255, 255, 0.05);
+      background-color: @gray-alpha-lighter;
     }
+    // --------------------------------------------------------------------------
+    
+    
+    // --------------------------------------------------------------------------
+    // Code Block
+    // --------------------------------------------------------------------------
+    .cm-s-default {
+      .cm-atom      { color: @violet-13; }
+      .cm-attribute { color: @green-13; }
+      .cm-builtin   { color: @azure-13; }
+      .cm-bracket   { opacity: 0.5; }
+      .cm-comment   { color: @gray-06; font-style: italic; }
+      .cm-def       { color: @teal-16; font-weight: @font-weight-bold; }
+      .cm-error     { color: @red-10; font-style: italic; }
+      .cm-header    { color: @azure-13; font-weight: @font-weight-regular; }
+      .cm-keyword   { color: @azure-13; }
+      .cm-meta      { color: @gray-08; }
+      .cm-minus     { color: @red-14; }
+      .cm-number    { color: @yellow-13; }
+      .cm-operator  { color: @indigo-18; }
+      .cm-plus      { color: @yellow-13;}
+      .cm-property  { color: @azure-13; }
+      .cm-qualifier { color: @green-13; }
+      .cm-quote     { display: inline; width: inherit; }
+      .cm-string    { color: @red-15; }
+      .cm-string-2  { color: @orange-13; }
+      .cm-tag       { color: @teal-12; }
+      .cm-type        { color: @white; }
+      .cm-variable,
+      .cm-variable-2,
+      .cm-variable-3,  { color: @violet-13; }
 
-    img {
-      background-color: transparent;
+      
+      // JSON's key
+      .property.cm-string {
+        color: @azure-13;
+      }
+      
+      .cm-hr {
+        color: @gray-08;
+      }
+      
+      .cm-link {
+        color: @green-06;
+      }
+      
+      .cm-error {
+        color: @red-10;
+      }
+      
+      .cm-negative   { color: @red-08; }
+      .cm-positive  { color: @yellow-08; }
+      
+      .cm-strong    { font-weight: @font-weight-bold; }
+      .cm-em        { font-style: italic; }
+      
+      .cm-link { text-decoration: underline; }
+      .cm-strikethrough { color: @gray-07; text-decoration-color: @gray-06; }
+      
+      .cm-punctuation { color: @black; }
     }
+    // --------------------------------------------------------------------------
 
-    .highlight pre,
-    pre {
-      background-color: rgba(0, 0, 0, 0.1);
-    }
-
-    .cm-header {color: #ffcc66;}
-    .cm-quote {color: #969896; font-style: italic;}
-    .cm-negative {color: #d44;}
-    .cm-positive {color: #292;}
-    .cm-header, .cm-strong {font-weight: bold;}
-    .cm-em {font-style: italic;}
-    .cm-link {text-decoration: underline;}
-    .cm-strikethrough {text-decoration: line-through;}
-
-    .cm-keyword {color: #cc99cc; font-weight: normal;}
-    .cm-atom {color: #8abeb7;}
-    .cm-number {color: #f99157;}
-    .cm-def {color: #b5bd68;}
-    .cm-property {color: #b5bd68;}
-    .cm-operator {color: #cc99cc;}
-    .cm-variable,
-    .cm-punctuation {}
-    .cm-variable-2 {color: #4A664A;}
-    .cm-variable-3, .cm-type {color: rgba(255, 255, 255, 0.8);}
-    .cm-comment {color: #969896; font-style: italic;}
-    .cm-string {color: #8abeb7;}
-    .cm-string-2 {color: #8abeb7;}
-    .cm-meta {color: #f99157;}
-    .cm-qualifier {color: #555;}
-    .cm-builtin {color: #8abeb7;}
-    .cm-bracket {color: #f99157;}
-    .cm-tag {color: #a54543;}
-    .cm-attribute {color: #fda331;}
-    .cm-hr {color: #999;}
-    .cm-link {color: #f99157;}
-
-    .cm-error {color: #f00;}
   }
-  */
 }
